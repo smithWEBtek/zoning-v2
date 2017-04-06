@@ -1,5 +1,9 @@
 <h1>Zoning Data</h1>
 
+<% if @zone_reqs.blank? %>
+  <h4>No matches in search for: <%= params[:search] %>.</h4>
+<% end %>
+
 <% @zone_reqs.each do |zone_req| %>
   Applied online? <%= zone_req.applied_online %> |
   Date: <%= zone_req.applicationdate %><br>

@@ -1,7 +1,12 @@
 class ZoneReqsController < ApplicationController
 
   def index
-    @zone_reqs = ZoneReq.all
+    if params[:search]
+      phrase = params[:search]
+      @zone_reqs = ZoneReq.search(phrase)
+    else
+      @zone_reqs = ZoneReq.all
+    end
   end
 
   def show

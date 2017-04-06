@@ -16,4 +16,17 @@ class ZoneReq < ApplicationRecord
       )
     end 
   end
+  
+  def self.search(phrase)
+    ZoneReq.all.each do |zr|
+      string = zr.to_s
+      if string.include?(phrase)
+        @zone_reqs << zr
+      else
+        @zone_reqs = ZoneReq.all
+      end
+    end
+  end
 end
+# blog to follow for search function:
+# http://www.rymcmahon.com/categories/1

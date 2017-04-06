@@ -7,7 +7,19 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <%= link_to "Home", root_path %> |
+  <%= link_to "Analysis1", root_path %> |
+  <%= link_to "Analysis2", root_path %><br>
+<hr>
+Search for a date: YYYY-MM-DD format
+<%= form_tag(zone_reqs_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Address or Application Date" %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+<hr>
+<div class="flash-style">
+  <p><%= notice %><%= alert %></p>
+</div>
   <body>
     <%= yield %>
   </body>
