@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# zoning-v2
+Cambridge, MA Zoning Board Requests Dashboard
+>>>>>>> 8a577a22e1af33ce928309188bb0d8e7afc011c7
