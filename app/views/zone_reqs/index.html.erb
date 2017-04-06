@@ -1,0 +1,11 @@
+<h1>Zoning Data</h1>
+
+<% @zone_reqs.each do |zone_req| %>
+  Applied online? <%= zone_req.applied_online %> |
+  Date: <%= zone_req.applicationdate %><br>
+  Address: <%= link_to zone_req.location_address, zone_req_path(zone_req) %>, 
+  <%= zone_req.location_city %>, 
+  <%= zone_req.location_state %><br>
+  Description: <%= zone_req.description %><br><br>
+
+<% end %>
